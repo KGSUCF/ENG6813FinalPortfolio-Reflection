@@ -5,6 +5,9 @@
   function placeholder(img) {
     var box = img.parentNode;
     var name = img.getAttribute('data-name') || img.alt || 'Artifact';
+    // data-hint lets a card that never needs a screenshot say something better
+    // than "coming soon" when it falls back.
+    var hintText = img.getAttribute('data-hint');
     img.remove();
     box.classList.add('is-placeholder');
     var title = document.createElement('p');
@@ -12,7 +15,8 @@
     title.textContent = name;
     var hint = document.createElement('p');
     hint.className = 'ph-hint';
-    hint.textContent = 'Screenshot coming soon';
+    if (hintText) hint.innerHTML = hintText;
+    else hint.textContent = 'Screenshot coming soon';
     box.append(title, hint);
   }
 
