@@ -639,3 +639,100 @@ tr.is-flagged td, tr.is-flagged th { background: var(--gold-wash); }
   .schedule-table { min-width: 0; font-size: 8pt; }
   .table-scroll { overflow: visible; }
 }
+
+/* --- Bloom's taxonomy coverage ------------------------------------------- */
+/* Ordinal ramp: Bloom levels are an ordered scale, so one hue stepping
+   light -> dark carries the rising cognitive demand. Validated for monotone
+   lightness, adjacent step gaps, and a light end clearing 3:1 on the card
+   surface. Sequential single-hue is colourblind-safe by construction, and the
+   level name is always present as text, so nothing is encoded by colour alone. */
+:root {
+  --bloom-1: #9D8DAF;
+  --bloom-2: #88769B;
+  --bloom-3: #736088;
+  --bloom-4: #5E4974;
+  --bloom-5: #493361;
+  --bloom-6: #341C4D;
+}
+
+.bloom {
+  margin: 0;
+  /* cap the width: a full 1120px track makes a count of 3 read as an enormous
+     bar, which overstates the magnitude */
+  max-width: 44rem;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1.5rem clamp(1rem, 3vw, 1.75rem);
+  box-shadow: var(--shadow);
+}
+
+.bloom-head { margin-bottom: 1.25rem; }
+.bloom-figure {
+  /* hero figure takes the sans, never the serif used for headings */
+  font-family: var(--sans);
+  font-size: clamp(2rem, 1.5rem + 2vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--plum);
+  display: block;
+  margin-bottom: .3rem;
+}
+.bloom-figure-note {
+  font-size: .95rem;
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 46ch;
+}
+
+.bloom-table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.bloom-table th, .bloom-table td { border: 0; padding: .45rem 0; vertical-align: middle; }
+.bloom-table tbody th {
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  padding-right: 1rem;
+  width: 1%;
+}
+.bloom-table td.bloom-track { width: 100%; padding-right: 1.25rem; }
+.bloom-bar {
+  display: block;
+  height: 10px;                 /* thin mark, not a heavy block */
+  width: var(--w);
+  min-width: 10px;
+  background: var(--c);
+  border-radius: 0 5px 5px 0;   /* rounded data-end, anchored at the baseline */
+}
+.bloom-table td.bloom-count {
+  width: 1%;
+  white-space: nowrap;
+  text-align: right;
+  font-variant-numeric: tabular-nums;  /* aligns down the column */
+  color: var(--ink-soft);
+  padding-right: 1rem;
+}
+.bloom-objs { width: 1%; white-space: nowrap; }
+.bloom-obj {
+  display: inline-block;
+  min-width: 1.4rem;
+  text-align: center;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--plum);
+  background: var(--plum-wash);
+  border: 1px solid #D6C7E2;
+  border-radius: 4px;
+  padding: .05rem .25rem;
+  margin-left: .2rem;
+}
+.bloom-foot {
+  margin: 1.25rem 0 0;
+  font-size: .875rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 600px) {
+  .bloom-table { font-size: .875rem; }
+  .bloom-table tbody th { white-space: normal; padding-right: .6rem; }
+  .bloom-objs { display: none; }   /* numbers stay in the objective cards above */
+}
