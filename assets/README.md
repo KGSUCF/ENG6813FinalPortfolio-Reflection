@@ -13,11 +13,13 @@ never broken by a missing screenshot. Add the file and it takes over automatical
 | `point_taken.png` | https://kgsucf.github.io/PointTaken/ |
 | `tax_visualization.png` | https://kgsucf.github.io/ENG6813VisualAnalysis/tax-data-rhetoric.html |
 | `lincoln_explorer.png` | https://kgsucf.github.io/ENG6813AIforCodeandDigitalHumanities/ |
+| `ai_policy_cartoon.png` | `artifacts/ai-policy-cartoon.html` — optional, for the gallery card only |
 
 Roughly 1200×750 (the cards crop to 16:10, so anything near that ratio works).
 
-The AI policy explainer does **not** need a screenshot — it renders live from
-`artifacts/ai-policy-cartoon.html`.
+The AI Policy **page** needs no screenshot — it renders the explainer live from
+`artifacts/ai-policy-cartoon.html`. `ai_policy_cartoon.png` is optional and only affects
+the card in the Teaching Artifacts gallery, which falls back to a labelled tile without it.
 
 ## Optional
 
