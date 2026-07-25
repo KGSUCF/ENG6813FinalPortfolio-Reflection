@@ -1,28 +1,89 @@
-# ENG 2011 Portfolio Content Package
+# ENG 2011: Media Literacy in the Humanities — e-portfolio
 
-This package contains curated source files for building a GitHub Pages e-portfolio for:
+A GitHub Pages teaching portfolio and course proposal for **ENG 2011: Media Literacy in
+the Humanities**, a proposed introductory undergraduate course.
 
-**ENG 2011: Media Literacy in the Humanities**
+Built as the final project for ENG 6813, which is why this repository is named
+`ENG6813FinalPortfolio-Reflection`. ENG 2011 is the course being proposed.
 
-Use `portfolio_brief.md` as the source of truth. The other Markdown files provide current content for the site. Older weekly submissions may be used as background, but this package reflects the latest current decisions.
+**Live site:** https://kgsucf.github.io/ENG6813FinalPortfolio-Reflection/
+*(available once Pages is enabled — see below)*
 
-## Suggested workflow
+## Pages
 
-1. Upload these files to your GitHub repository.
-2. Add screenshots and links for artifacts in the `assets/` folder or update `artifact_gallery.md`.
-3. Open Claude Code connected to the repository.
-4. Paste the prompt in `claude_planning_prompt.md`.
-5. Ask Claude to propose a plan before it edits files.
-6. Review the plan, then let Claude build the GitHub Pages site.
-7. Update artifact links and screenshots manually if needed.
-8. Deploy with GitHub Pages.
+| File | Section |
+|---|---|
+| `index.html` | Home / Course Vision |
+| `overview.html` | Course Overview |
+| `objectives.html` | Learning Objectives |
+| `syllabus.html` | Syllabus & Weekly Course Map, plus grading |
+| `signature-assignment.html` | Signature Assignment |
+| `ai-policy.html` | AI Policy & Access |
+| `artifacts.html` | Teaching Artifacts |
+| `teaching-statement.html` | Teaching Statement |
+| `404.html` | Not-found page |
 
-## Important current decisions
+Plain HTML and CSS. No build step, no framework, no external fonts or CDNs — the site
+itself makes no third-party network requests. Edit the HTML directly.
 
-- The course is **ENG 2011: Media Literacy in the Humanities**.
-- The course overview has been revised to reduce repeated "how" phrasing and restore attention to students' own biases and interpretive habits.
-- Week 13 and Week 14 have been revised to give students earlier and more substantive peer feedback on the signature assignment.
-- The current AI policy is the broader course-wide policy, not the earlier signature-assignment-only policy.
-- The AI policy cartoon must be included prominently.
-- The old Week 8 signature-assignment portfolio should not be featured as a separate major artifact; the final e-portfolio replaces it.
-- Main featured teaching artifacts should include Point Taken, the 1% tax visualization, the Lincoln speeches explorer, and the AI policy cartoon.
+One exception: the embedded `artifacts/ai-policy-cartoon.html` loads the Bungee and
+Baloo 2 typefaces from Google Fonts, so the AI Policy page does reach out to
+`fonts.googleapis.com`. It degrades to system fonts if that request is blocked. Self-host
+the two fonts inside the artifact if you would rather the site call nothing external.
+
+`assets/css/site.css` holds the whole design. The palette lives in the CSS custom
+properties at the top of that file; change a value there and it updates everywhere.
+
+## Enabling GitHub Pages
+
+Pick **one** of these. They conflict with each other.
+
+**Option A — the included workflow (default).** Merge to `main`.
+`.github/workflows/pages.yml` runs, enables Pages, and publishes. If the enablement step
+fails on a permissions error, set *Settings → Pages → Source* to **GitHub Actions** and
+re-run the workflow from the Actions tab.
+
+**Option B — deploy from a branch.** Set *Settings → Pages → Source* to **Deploy from a
+branch**, `main` / `(root)`, and **delete `.github/workflows/pages.yml`**. Leaving it in
+place will produce a failing workflow run on every push. `.nojekyll` is already present,
+so the hand-written HTML is served as-is.
+
+## Adding artifact screenshots
+
+Artifact cards look for these files. When one is missing the card renders a styled
+placeholder tile instead, so the site always looks finished. Add a file and it appears on
+the next push — no code change needed.
+
+| File | Screenshot of |
+|---|---|
+| `assets/point_taken.png` | https://kgsucf.github.io/PointTaken/ |
+| `assets/tax_visualization.png` | https://kgsucf.github.io/ENG6813VisualAnalysis/tax-data-rhetoric.html |
+| `assets/lincoln_explorer.png` | https://kgsucf.github.io/ENG6813AIforCodeandDigitalHumanities/ |
+
+Roughly 1200×750 works well. The AI policy explainer needs no screenshot — it renders
+live from `artifacts/ai-policy-cartoon.html`.
+
+**Optional:** add `assets/og-image.png` (1200×630) and an
+`<meta property="og:image" content="assets/og-image.png">` line to each page's `<head>` so
+shared links preview with an image. Without it, previews show title and description only.
+
+## Local preview
+
+```sh
+python3 -m http.server 8000
+# then open http://localhost:8000
+```
+
+## Repository contents
+
+- `artifacts/ai-policy-cartoon.html` — interactive AI policy explainer, embedded on the
+  AI Policy page
+- `artifacts/Bloom.html` — Bloom's taxonomy mapping of the learning objectives
+- Course content in Markdown: `course_overview.md`, `learning_objectives.md`,
+  `syllabus_summary.md`, `weekly_schedule.md`, `signature_assignment.md`, `ai_policy.md`,
+  `grading_structure.md`, `teaching_statement.md`, `artifact_gallery.md`
+- Design and planning notes: `portfolio_brief.md`, `claude_planning_prompt.md`
+
+Note that the Markdown files are the editable record of the course design, but the site
+does **not** generate from them. The HTML holds the live copy, so a change to
+`course_overview.md` will not appear on the site unless `overview.html` is updated too.
