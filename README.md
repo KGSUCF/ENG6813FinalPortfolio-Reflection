@@ -7,7 +7,6 @@ Built as the final project for ENG 6813, which is why this repository is named
 `ENG6813FinalPortfolio-Reflection`. ENG 2011 is the course being proposed.
 
 **Live site:** https://kgsucf.github.io/ENG6813FinalPortfolio-Reflection/
-*(available once Pages is enabled — see below)*
 
 ## Pages
 
@@ -38,10 +37,14 @@ properties at the top of that file; change a value there and it updates everywhe
 
 Pick **one** of these. They conflict with each other.
 
-**Option A — the included workflow (default).** Merge to `main`.
-`.github/workflows/pages.yml` runs, enables Pages, and publishes. If the enablement step
-fails on a permissions error, set *Settings → Pages → Source* to **GitHub Actions** and
-re-run the workflow from the Actions tab.
+**Option A — the included workflow (in use).** *Settings → Pages → Source* is set to
+**GitHub Actions**, and `.github/workflows/pages.yml` publishes on every push to `main`.
+Nothing else is needed.
+
+The workflow's `enablement: true` is meant to switch Pages on by itself, but the
+automatic token is not permitted to create a Pages site that has never existed — it
+fails with *"Resource not accessible by integration."* Setting the Source manually once,
+as above, is what fixed it. Worth knowing if this is ever set up again from scratch.
 
 **Option B — deploy from a branch.** Set *Settings → Pages → Source* to **Deploy from a
 branch**, `main` / `(root)`, and **delete `.github/workflows/pages.yml`**. Leaving it in
@@ -59,9 +62,12 @@ the next push — no code change needed.
 | `assets/point_taken.png` | https://kgsucf.github.io/PointTaken/ |
 | `assets/tax_visualization.png` | https://kgsucf.github.io/ENG6813VisualAnalysis/tax-data-rhetoric.html |
 | `assets/lincoln_explorer.png` | https://kgsucf.github.io/ENG6813AIforCodeandDigitalHumanities/ |
+| `assets/ai_policy_cartoon.png` | the explainer — optional, gallery card only |
 
-Roughly 1200×750 works well. The AI policy explainer needs no screenshot — it renders
-live from `artifacts/ai-policy-cartoon.html`.
+Any aspect ratio works. Cards fit the whole image into a 4:3 frame without cropping.
+
+The AI Policy **page** needs no screenshot — it renders the explainer live from
+`artifacts/ai-policy-cartoon.html`.
 
 **Optional:** add `assets/og-image.png` (1200×630) and an
 `<meta property="og:image" content="assets/og-image.png">` line to each page's `<head>` so
@@ -78,7 +84,6 @@ python3 -m http.server 8000
 
 - `artifacts/ai-policy-cartoon.html` — interactive AI policy explainer, embedded on the
   AI Policy page
-- `artifacts/Bloom.html` — Bloom's taxonomy mapping of the learning objectives
 - Course content in Markdown: `course_overview.md`, `learning_objectives.md`,
   `syllabus_summary.md`, `weekly_schedule.md`, `signature_assignment.md`, `ai_policy.md`,
   `grading_structure.md`, `teaching_statement.md`, `artifact_gallery.md`
