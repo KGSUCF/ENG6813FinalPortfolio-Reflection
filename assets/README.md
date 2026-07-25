@@ -15,7 +15,8 @@ never broken by a missing screenshot. Add the file and it takes over automatical
 | `lincoln_explorer.png` | https://kgsucf.github.io/ENG6813AIforCodeandDigitalHumanities/ |
 | `ai_policy_cartoon.png` | `artifacts/ai-policy-cartoon.html` — optional, for the gallery card only |
 
-Roughly 1200×750 (the cards crop to 16:10, so anything near that ratio works).
+Any shape works. Cards fit the whole image into a 4:3 frame without cropping, so a
+tall portrait screenshot and a wide landscape one both display complete.
 
 The AI Policy **page** needs no screenshot — it renders the explainer live from
 `artifacts/ai-policy-cartoon.html`. `ai_policy_cartoon.png` is optional and only affects
