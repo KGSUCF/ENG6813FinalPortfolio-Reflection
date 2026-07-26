@@ -53,13 +53,47 @@ Students submit a draft packet: close-reading section, AI/tool-use plan or note,
 ### Final Exam Period: Final Submission
 Students submit the analytical case study, public-facing guide, AI/tool documentation, reflection, and revision note.
 
-## Rubric
+## Rubrics
+
+Each checkpoint is graded on its own criteria. The three together come to the
+assignment's 400 points.
+
+### Proposal and preliminary reading — 100 points
+
+*Week 13. Graded on whether the project is well chosen and ready to develop, not on polish.*
+
+| Category | Points | Description |
+|---|---:|---|
+| Artifact choice and rationale | 25 | The student selects an appropriate, manageable persuasive message or small information environment, documents it clearly, and explains why it is worth studying. |
+| Audience and purpose analysis | 20 | The student identifies the intended audience, the purpose of the message, and the response it seeks. |
+| Preliminary close reading | 25 | The student offers an initial interpretation and names the persuasive techniques the artifact appears to use. |
+| Evidence questions identified | 15 | The student poses specific, checkable questions about claims, sources, and missing context. |
+| Planned tool and AI use | 15 | The student names the tools they intend to use, including one chatbot or AI-assisted tool, and says what each is for. |
+| **Total** | **100** | |
+
+### Draft checkpoint and peer review — 100 points
+
+*Week 14. Graded on genuine progress and on engagement with peer feedback.*
+
+| Category | Points | Description |
+|---|---:|---|
+| Close-reading section in progress | 30 | A substantive draft of the analysis, not an outline: specific passages, images, or figures examined in detail. |
+| Evidence-check section or plan | 20 | Claims verified or complicated, or a concrete plan naming which claims will be checked and how. |
+| AI/tool-use note draft | 20 | A record of the tool, the prompt or query, what it helped with, what it missed, and how the output was verified. |
+| Public-facing guide outline or prototype | 20 | A clear plan or working prototype of the guide, with its format and intended reader identified. |
+| Response to peer feedback | 10 | A brief, specific account of what peers raised and what the student intends to do about it. |
+| **Total** | **100** | |
+
+### Final submission — 200 points
+
+*Final exam period. Weighted toward analysis and responsible tool use.*
 
 | Category | Points | Description |
 |---|---:|---|
 | Choice and framing of artifact | 10 | The student chooses an appropriate persuasive message or information environment, documents it clearly, and explains why it matters. |
-| Close reading and rhetorical analysis | 25 | The student analyzes audience, purpose, language, image, tone, genre, layout, platform, emotional appeals, framing, authority, repetition, and other persuasive strategies. |
-| Evidence and source evaluation | 20 | The student checks significant claims or context, distinguishes evidence from interpretation, identifies missing or uncertain information, and avoids unsupported conclusions. |
-| Critical use of AI/digital tools | 20 | The student uses at least two course-practiced tools, including one chatbot or AI-assisted tool; documents the process; evaluates usefulness and limitations; and does not treat tool output as authority. |
-| Reflection on interpretation and responsibility | 10 | The student thoughtfully reflects on assumptions, emotional responses, possible biases, and the role of the reader, sharer, or interpreter. |
-| Public-facing communication | 15 | The final guide is clear, accessible, well-organized, ethical, and useful to readers beyond the class. |
+| Close reading and rhetorical analysis | 60 | The student analyzes audience, purpose, language, image, tone, genre, layout, platform, emotional appeals, framing, authority, repetition, and other persuasive strategies. |
+| Evidence and source evaluation | 40 | The student checks significant claims or context, distinguishes evidence from interpretation, identifies missing or uncertain information, and avoids unsupported conclusions. |
+| Critical use of AI/digital tools | 40 | The student uses at least two course-practiced tools, including one chatbot or AI-assisted tool; documents the process; evaluates usefulness and limitations; and does not treat tool output as authority. |
+| Reflection on interpretation and responsibility | 20 | The student thoughtfully reflects on assumptions, emotional responses, possible biases, and the role of the reader, sharer, or interpreter. |
+| Public-facing communication | 30 | The final guide is clear, accessible, well-organized, ethical, and useful to readers beyond the class. |
+| **Total** | **200** | |

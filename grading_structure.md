@@ -36,4 +36,6 @@ The signature assignment is worth 400 points total:
 | Final submission | 200 |
 | **Total** | **400** |
 
-This structure makes the signature assignment substantial while rewarding steady engagement throughout the course.
+Each of the three checkpoints has its own rubric; see `signature_assignment.md`.
+
+This structure makes the signature assignment substantial while rewarding steady engagement throughout the course. The split is 600 points for ongoing coursework — activity verification, the introduction post, twelve weekly assignments, and the final reflection — against 400 for the signature assignment.
