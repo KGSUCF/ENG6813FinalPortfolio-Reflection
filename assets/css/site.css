@@ -764,3 +764,8 @@ tr.is-flagged td, tr.is-flagged th { background: var(--gold-wash); }
   color: var(--gold-text);
   border: 1px solid #E3CE9B;
 }
+.src-open {
+  background: var(--plum-wash);
+  color: var(--plum);
+  border: 1px solid #D6C7E2;
+}
