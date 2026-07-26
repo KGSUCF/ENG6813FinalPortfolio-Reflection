@@ -29,3 +29,7 @@ The final unit focuses on source evaluation, lateral reading, data context, fact
 No paid AI subscription is required. Students will use freely available or institutionally available tools, which may include Canvas, web browsers, library resources, Voyant or comparable text-analysis tools, search engines, reverse image/source tracing tools, and a chatbot such as Claude or another approved tool.
 
 All substantial course projects must use public-domain, openly licensed, government-produced, instructor-approved, or otherwise legally usable materials.
+
+## Readings and source stability
+
+Openly posted copies of scholarly work are frequently taken down. Every assigned reading is therefore linked through the UCF Library or through the creator's own site, whichever is more likely to remain available. Eight of the twelve linked readings are UCF Library permalinks and require a UCF login; the remaining four are hosted by their creators or publishers and are openly accessible. The course-map table marks which is which.
