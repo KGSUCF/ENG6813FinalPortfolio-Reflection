@@ -56,7 +56,10 @@
     text-shadow: 3px 3px 0 var(--yellow);
   }
   .hero p{ font-size:1.02rem; color:#4a3d38; max-width:36ch; margin:0 auto 8px; }
-  .credit{ font-size:0.74rem; color:#8a7b74; margin-top:18px; }
+  /* Scoped to .hero so it outranks `.hero p { margin:0 auto 8px }`, which was
+     silently cancelling the margin-top below. The briefing bubble's tail hangs
+     16px past the box, so the credit needs to clear that plus breathing room. */
+  .hero .credit{ font-size:0.74rem; color:#8a7b74; margin-top:30px; }
 
   .briefing{
     margin-top:30px; background:#fff; border:3px solid var(--ink); border-radius:16px;
