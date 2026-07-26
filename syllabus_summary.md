@@ -32,4 +32,4 @@ All substantial course projects must use public-domain, openly licensed, governm
 
 ## Readings and source stability
 
-Openly posted copies of scholarly work are frequently taken down. Every assigned reading is therefore linked through the UCF Library or through the creator's own site, whichever is more likely to remain available. Eight of the twelve linked readings are UCF Library permalinks and require a UCF login; the remaining four are hosted by their creators or publishers and are openly accessible. The course-map table marks which is which.
+Openly posted copies of scholarly work are frequently taken down. Every assigned reading is therefore linked through the UCF Library or through the creator's own site, whichever is more likely to remain available. Eight of the twelve linked readings are UCF Library permalinks and require a UCF login; the remaining four are hosted by their creators or publishers and are openly accessible. The course-map table badges each reading as **UCF Library** or **Open access**.
