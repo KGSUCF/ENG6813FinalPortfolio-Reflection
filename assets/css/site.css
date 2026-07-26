@@ -736,3 +736,31 @@ tr.is-flagged td, tr.is-flagged th { background: var(--gold-wash); }
   .bloom-table tbody th { white-space: normal; padding-right: .6rem; }
   .bloom-objs { display: none; }   /* numbers stay in the objective cards above */
 }
+
+/* --- reading links + source badges --------------------------------------- */
+/* Readings are sourced from the UCF Library or the creator's own site rather
+   than from open aggregators, because openly posted copies disappear. The badge
+   tells a reader which links need a UCF login before they click one. */
+
+/* colour + underline already mark these as links; bold too made the
+   reading column overpower every other column in the row */
+.reading-link { font-weight: inherit; }
+
+.src {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  margin-top: .35rem;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .1rem .45rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.src-ucf {
+  background: var(--gold-wash);
+  color: var(--gold-text);
+  border: 1px solid #E3CE9B;
+}
