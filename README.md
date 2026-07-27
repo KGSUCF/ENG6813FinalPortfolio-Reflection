@@ -22,13 +22,13 @@ Built as the final project for ENG 6813, which is why this repository is named
 | `teaching-statement.html` | Teaching Statement |
 | `404.html` | Not-found page |
 
-Plain HTML and CSS. No build step, no framework, no external fonts or CDNs — the site
-itself makes no third-party network requests. Edit the HTML directly.
+Plain HTML and CSS. No build step, no framework, no external fonts or CDNs — **the site
+makes no third-party network requests at all**. Edit the HTML directly.
 
-One exception: the embedded `artifacts/ai-policy-cartoon.html` loads the Bungee and
-Baloo 2 typefaces from Google Fonts, so the AI Policy page does reach out to
-`fonts.googleapis.com`. It degrades to system fonts if that request is blocked. Self-host
-the two fonts inside the artifact if you would rather the site call nothing external.
+The AI policy cartoon uses Bungee and Baloo 2, both served from `assets/fonts/` rather
+than Google Fonts, so no visitor IP is sent to a third party and the artwork keeps its
+intended look on networks that block Google. Both faces are SIL Open Font License 1.1,
+which permits redistributing them in this repository.
 
 `assets/css/site.css` holds the whole design. The palette lives in the CSS custom
 properties at the top of that file; change a value there and it updates everywhere.
