@@ -69,9 +69,10 @@ Any aspect ratio works. Cards fit the whole image into a 4:3 frame without cropp
 The AI Policy **page** needs no screenshot — it renders the explainer live from
 `artifacts/ai-policy-cartoon.html`.
 
-**Optional:** add `assets/og-image.png` (1200×630) and an
-`<meta property="og:image" content="assets/og-image.png">` line to each page's `<head>` so
-shared links preview with an image. Without it, previews show title and description only.
+`assets/og-image.png` (1200×630) is the card shown when a link to this site is pasted
+into Slack, Teams, LinkedIn, Canvas, or a message. It is a rendered screenshot, not a
+photo — the source that produced it is a small HTML page using the site palette, so it can
+be regenerated at any size if the title or tagline ever changes.
 
 ## Local preview
 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+
+  body {
+    background: #FBF7F0;
+    font-family: "Liberation Sans", "DejaVu Sans", sans-serif;
+    color: #241F2E;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* gold rule across the top, echoing the site masthead */
+  .topbar { height: 12px; background: #C9971F; }
+
+  /* faint plum wash panel on the right, echoing the site's tinted bands */
+  .wash {
+    position: absolute;
+    right: 0; top: 12px; bottom: 0;
+    width: 252px;
+    background: #F0EAF4;
+    border-left: 1px solid #E4DACB;
+  }
+
+  /* the site favicon mark, enlarged */
+  .mark {
+    position: absolute;
+    right: 70px; top: 241px;
+    width: 148px; height: 148px;
+    background: #4A2C6B;
+    border-radius: 32px;
+    display: grid; place-items: center;
+  }
+  .mark span {
+    font-family: "Liberation Serif", Georgia, serif;
+    font-size: 104px;
+    line-height: 1;
+    color: #C9971F;
+    transform: translateY(-4px);
+  }
+
+  .content { padding: 74px 300px 0 92px; position: relative; z-index: 2; }
+
+  .eyebrow {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #8A5E12;
+    margin-bottom: 26px;
+  }
+
+  h1 {
+    font-family: "Liberation Serif", Georgia, serif;
+    font-size: 82px;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    font-weight: 700;
+    color: #38204F;
+    margin-bottom: 30px;
+  }
+
+  .rule { width: 128px; height: 6px; background: #C9971F; margin-bottom: 30px; }
+
+  .tagline {
+    font-size: 29px;
+    line-height: 1.45;
+    color: #4A4453;
+    max-width: 30ch;
+  }
+
+  .foot {
+    position: absolute;
+    left: 92px; bottom: 52px;
+    font-size: 21px;
+    color: #4A4453;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  .foot .dot { color: #C9971F; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <div class="wash"></div>
+  <div class="mark"><span>?</span></div>
+
+  <div class="content">
+    <p class="eyebrow">ENG 2011 &middot; Proposed undergraduate course</p>
+    <h1>Media Literacy<br>in the Humanities</h1>
+    <div class="rule"></div>
+    <p class="tagline">Reading persuasion carefully &mdash; and keeping your own judgment intact.</p>
+  </div>
+
+  <div class="foot">
+    <span>Course proposal</span><span class="dot">&middot;</span>
+    <span>Teaching portfolio</span><span class="dot">&middot;</span>
+    <span>Fall 2026</span>
+  </div>
+</body>
+</html>
